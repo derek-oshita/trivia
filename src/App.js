@@ -7,7 +7,6 @@ class App extends Component {
     return (
         <div>
           <Switch>
-            {/* <Route path="/about" component={ About } /> */}
             <Routes />
           </Switch>
         </div>
