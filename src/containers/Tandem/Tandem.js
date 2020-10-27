@@ -1,10 +1,17 @@
 import React, { Component } from 'react'; 
+import Question from '../../components/Question'; 
 
 class Tandem extends Component {
     render() {
         return(
             <>
-                <p>Tandem container...</p>
+            <header>
+                <h1>TANDEM TRIVIA!</h1>
+            </header>
+            <div>
+                <Question />
+            </div>
+
             </>
         )
     }
