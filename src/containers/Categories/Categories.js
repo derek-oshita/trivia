@@ -1,5 +1,7 @@
 import React, { Component } from 'react'; 
+import { Link } from 'react-router-dom'; 
 import './Categories.css'; 
+import Tandem from '../Tandem/Tandem';
 
 class Categories extends Component {
     state = {
@@ -7,7 +9,23 @@ class Categories extends Component {
     }
     render () {
         return (
-            <p>This is the categories container...</p>
+           <>
+           <header>
+               <h2>PICK A CATEGORY!</h2>
+           </header>
+           <section>
+               {/* TANDEM */}
+               <div>
+                   <Link to="/tandem">
+                        <p className="category">TANDEM TRIVIA</p>
+                    </Link>
+               </div>
+               {/* COMPUTER SCIENCE */}
+               <div>
+                    <p className="category">COMPUTER SCIENCE</p>
+               </div>
+           </section>
+           </>
         )
     }
 }; 
