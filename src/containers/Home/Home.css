@@ -1,0 +1,22 @@
+* {
+    margin: 0; 
+}
+
+header {
+    text-align: center; 
+}
+
+h1 {
+    font-family: 'Jockey One', sans-serif;
+    font-size: 100px; 
+    color: #EAE9E9; 
+}
+
+p {
+    color: #EAE9E9;  
+    font-size: 25px; 
+}
+
+section {
+    text-align: center; 
+}

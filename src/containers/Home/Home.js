@@ -7,8 +7,8 @@ function Home () {
         <>
             {/* HEADER */}
                 <header>
-                    <h1>Trivia Trainer</h1>
-                    <p>A place to train the mind!</p>
+                    <h1>TRIVIA TRAINER!</h1>
+                    <p>A place to train the mind</p>
                 </header>
             {/* GET STARTED BUTTON */}
                 <section>
