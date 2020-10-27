@@ -9,14 +9,19 @@ function QuestionPicker() {
     const getRandomNumber = (arr) => {
         let length = arr.length; 
         let result = Math.floor(Math.random() * length); 
-        return result; 
+    }
+
+    const getRandomQuestion = (arr) => {
+        let length = arr.length; 
+        let index = Math.floor(Math.random() * length); 
+        return arr[index];
     }
 
     return(
         <>
-        <p><Question /></p>
-        {/* {console.log(questions.length)} */}
-        <h1>{getRandomNumber(questions)}</h1>
+        <p><Question questionObj={getRandomQuestion(questions)}/></p>
+        {console.log(getRandomQuestion(questions))}
+        {/* <h1>{getRandomNumber(questions)}</h1> */}
         </>
     )
 }
