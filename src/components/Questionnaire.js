@@ -1,6 +1,7 @@
 import React, { Component } from 'react'; 
 import Question from './Question'; 
 import Score from './Score'; 
+import ShowAnswer from './ShowAnswer'; 
 
 const questions = require('../Tandem_Questions.json'); 
 
@@ -10,20 +11,26 @@ class Questionnaire extends Component {
         currentIndex: 0, 
         score: 0, 
         gameEnded: false, 
+        showAnswer: false, 
     }; 
+
     handleAnswer = answer => {
         let newIndex = this.state.currentIndex + 1; 
-        this.setState(answer => {
-            return {currentIndex: answer.currentIndex + 1}
-        })
-        if (answer === this.state.questions[this.state.currentIndex].correct) {
-            this.setState(answer => {
-                return {score: answer.score + 1}
-            })
-        }
-        if (newIndex >= 10) {
-            this.state.gameEnded = true; 
-        }
+        this.state.showAnswer = true; 
+        // // change question
+        // this.setState(answer => {
+        //     return {currentIndex: answer.currentIndex + 1}
+        // })
+        // // change score if answer is correct
+        // if (answer === this.state.questions[this.state.currentIndex].correct) {
+        //     this.setState(answer => {
+        //         return {score: answer.score + 1}
+        //     })
+        // }
+        // // end game
+        // if (newIndex >= 10) {
+        //     this.state.gameEnded = true; 
+        // }
     }; 
     render() {
 
@@ -32,6 +39,7 @@ class Questionnaire extends Component {
         const currentQuestion = questions[currentIndex];
         const score = this.state.score; 
         const gameEnded = this.state.gameEnded; 
+        const showAnswer = this.state.showAnswer; 
 
         return gameEnded ? (
         <p>Your score was...{score}</p>
@@ -39,6 +47,7 @@ class Questionnaire extends Component {
             <>
             <Score score={score} />
             <Question questionObj={currentQuestion} handleAnswer={this.handleAnswer}/>
+            <ShowAnswer showAnswer={showAnswer} />
             </>
         )
     }
