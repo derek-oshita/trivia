@@ -24,24 +24,37 @@ const questions = require('../Tandem_Questions.json');
 
 
 class QuestionPicker extends Component {
-
     state = {
         questions: questions, 
         currentIndex: 0, 
     }; 
 
+    // componentDidMount() {
+
+    // }
+
+    handleAnswer = answer => {
+        this.setState(answer => {
+            return {currentIndex: answer.currentIndex + 1}
+        })
+    }; 
+
     render() {
+
         const currentIndex = this.state.currentIndex; 
-        const currentQuestion = this.state.questions; 
+        const questions = this.state.questions; 
+        const currentQuestion = questions[currentIndex]
 
         return(
             <>
-                <p><Question questionObj={currentQuestion[currentIndex]} /></p>
+                <p><Question questionObj={currentQuestion} handleAnswer={this.handleAnswer}/></p>
             </>
         )
     }
 
 }
+
+
 
 
 export default QuestionPicker; 
