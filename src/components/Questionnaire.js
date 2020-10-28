@@ -9,8 +9,10 @@ class Questionnaire extends Component {
         questions: questions, 
         currentIndex: 0, 
         score: 0, 
+        gameEnded: false, 
     }; 
     handleAnswer = answer => {
+        let newIndex = this.state.currentIndex + 1; 
         this.setState(answer => {
             return {currentIndex: answer.currentIndex + 1}
         })
@@ -19,24 +21,24 @@ class Questionnaire extends Component {
                 return {score: answer.score + 1}
             })
         }
+        if (newIndex >= 10) {
+            this.state.gameEnded = true; 
+        }
     }; 
     render() {
 
         const currentIndex = this.state.currentIndex; 
         const questions = this.state.questions; 
-        const currentQuestion = questions[currentIndex]
+        const currentQuestion = questions[currentIndex];
         const score = this.state.score; 
+        const gameEnded = this.state.gameEnded; 
 
-        return(
+        return gameEnded ? (
+        <p>Your score was...{score}</p>
+        ) : (
             <>
-                <section>
-                    <Score score={score} />
-                </section>
-                <section>
-
-                <p><Question questionObj={currentQuestion} handleAnswer={this.handleAnswer}/></p>
-                </section>
-                {console.log(this.state.score)}
+            <Score score={score} />
+            <Question questionObj={currentQuestion} handleAnswer={this.handleAnswer}/>
             </>
         )
     }

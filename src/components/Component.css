@@ -1,0 +1,29 @@
+/***************************************************************************************************************************************
+QUESTION COMPONENT
+*/
+
+.question-section {
+    width: 100vw; 
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+}
+
+.question-box {
+    height: 35vh; 
+    width: 35vw; 
+    background-color: blue;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    border: 8px solid white;
+    border-radius: 5px;  
+}
+
+/***************************************************************************************************************************************
+SCORE COMPONENT
+*/
+
+.score-div {
+    text-align: center; 
+}

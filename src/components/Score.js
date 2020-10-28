@@ -1,8 +1,12 @@
 import React, { Component } from 'react'; 
+import './Component.css'; 
 
 function Score (props) {
+    const total = 10; 
     return (
-    <p>{props.score}</p>
+    <div className="score-div">
+       <p>{props.score} / {total}</p> 
+    </div>
     )
 }
 

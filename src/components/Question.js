@@ -1,25 +1,18 @@
 import React from 'react'; 
 import Answer from './Answer'; 
+import './Component.css'; 
 
 function Question (props) {
-    // let incorrect = props.questionObj.incorrect.map((incorrectAnswer) => {
-    //     return <Answer incorrect={incorrectAnswer} />
-    // })
-    // let correct = props.questionObj.correct;
     const handleAnswer = props.handleAnswer; 
+    const question = props.questionObj.question; 
     return (
         <>
-        <div className="question-box">
-            <p>{props.questionObj.question}</p>
-        </div>
-        {/* <div className="answer-box">
-            {incorrect}
-            <button>{correct}</button>
-        </div> */}
-        {/* {console.log('Correct - ', props.questionObj.correct)} */}
-        <div>
+        <section className="question-section">
+            <div className="question-box">
+                <p>"{question.toUpperCase()}"</p>
+            </div>
+        </section>
             <Answer handleAnswer={handleAnswer} incorrect={props.questionObj.incorrect} correct={props.questionObj.correct} /> 
-        </div>
         </>
     )
 }
