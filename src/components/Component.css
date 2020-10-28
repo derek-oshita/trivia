@@ -27,3 +27,19 @@ SCORE COMPONENT
 .score-div {
     text-align: center; 
 }
+
+/***************************************************************************************************************************************
+ANSWER COMPONENT
+*/
+
+.btn-green {
+    background-color: green; 
+}
+
+.btn-white {
+    background-color: none;
+}
+
+.btn-red {
+    background-color: red; 
+}

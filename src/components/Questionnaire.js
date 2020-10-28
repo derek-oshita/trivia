@@ -1,7 +1,6 @@
 import React, { Component } from 'react'; 
 import Question from './Question'; 
 import Score from './Score'; 
-import ShowAnswer from './ShowAnswer'; 
 
 const questions = require('../Tandem_Questions.json'); 
 
@@ -16,7 +15,9 @@ class Questionnaire extends Component {
 
     handleAnswer = answer => {
         let newIndex = this.state.currentIndex + 1; 
-        this.state.showAnswer = true; 
+        this.setState({
+            showAnswer: true, 
+        })
         // // change question
         // this.setState(answer => {
         //     return {currentIndex: answer.currentIndex + 1}
@@ -31,6 +32,7 @@ class Questionnaire extends Component {
         // if (newIndex >= 10) {
         //     this.state.gameEnded = true; 
         // }
+        console.log(this.state.showAnswer)
     }; 
     render() {
 
@@ -46,8 +48,7 @@ class Questionnaire extends Component {
         ) : (
             <>
             <Score score={score} />
-            <Question questionObj={currentQuestion} handleAnswer={this.handleAnswer}/>
-            <ShowAnswer showAnswer={showAnswer} />
+            <Question questionObj={currentQuestion} handleAnswer={this.handleAnswer} showAnswer={showAnswer}/>
             </>
         )
     }

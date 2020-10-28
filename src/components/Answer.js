@@ -1,17 +1,23 @@
 import React from 'react'; 
+import './Component.css'; 
 
 function Answer (props) {
     
     const incorrectAnswers = props.incorrect; 
     const correctAnswer = props.correct; 
     const handleAnswer = props.handleAnswer; 
+    const showAnswer = props.showAnswer; 
     const shuffleAnswers = [correctAnswer, ...incorrectAnswers].sort(() => Math.random() - 0.5); 
 
     return (
         <>
-            {shuffleAnswers.map(answer => (
-                <button onClick={() => handleAnswer(answer)}>{answer}</button>
-            ))}
+            {shuffleAnswers.map(answer => {
+                const color = showAnswer ? 
+                answer === correctAnswer ? 'btn-green' : 'btn-red' : 'btn-white'
+                return (
+                (
+                <button className={`${color}`} onClick={() => handleAnswer(answer)}>{answer}</button>
+            ))})}
         </>
     )
 }
