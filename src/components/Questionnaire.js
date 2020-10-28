@@ -14,26 +14,33 @@ class Questionnaire extends Component {
     }; 
 
     handleAnswer = answer => {
-        let newIndex = this.state.currentIndex + 1; 
+        const newIndex = this.state.currentIndex + 1; 
+        if (!this.state.showAnswer) {
+            this.setState({
+                showAnswer: true, 
+            })
+            // change score if answer is correct
+            if (answer === this.state.questions[this.state.currentIndex].correct) {
+                this.setState(answer => {
+                    return {score: answer.score + 1}
+            })
+            // end game
+            if (newIndex >= 10) {
+                this.state.gameEnded = true; 
+            }
+        }}
+    };
+
+    handleNextQuestion = () => {
         this.setState({
-            showAnswer: true, 
+            showAnswer: false, 
         })
-        // // change question
-        // this.setState(answer => {
-        //     return {currentIndex: answer.currentIndex + 1}
-        // })
-        // // change score if answer is correct
-        // if (answer === this.state.questions[this.state.currentIndex].correct) {
-        //     this.setState(answer => {
-        //         return {score: answer.score + 1}
-        //     })
-        // }
-        // // end game
-        // if (newIndex >= 10) {
-        //     this.state.gameEnded = true; 
-        // }
-        console.log(this.state.showAnswer)
-    }; 
+        this.setState(answer => {
+            return {currentIndex: answer.currentIndex + 1}
+        })
+    };
+    
+
     render() {
 
         const currentIndex = this.state.currentIndex; 
@@ -42,13 +49,14 @@ class Questionnaire extends Component {
         const score = this.state.score; 
         const gameEnded = this.state.gameEnded; 
         const showAnswer = this.state.showAnswer; 
+        const handleNextQuestion = this.handleNextQuestion; 
 
         return gameEnded ? (
         <p>Your score was...{score}</p>
         ) : (
             <>
             <Score score={score} />
-            <Question questionObj={currentQuestion} handleAnswer={this.handleAnswer} showAnswer={showAnswer}/>
+            <Question questionObj={currentQuestion} handleAnswer={this.handleAnswer} showAnswer={showAnswer} handleNextQuestion={handleNextQuestion}/>
             </>
         )
     }

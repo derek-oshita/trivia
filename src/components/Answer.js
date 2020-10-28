@@ -8,6 +8,7 @@ function Answer (props) {
     const handleAnswer = props.handleAnswer; 
     const showAnswer = props.showAnswer; 
     const shuffleAnswers = [correctAnswer, ...incorrectAnswers].sort(() => Math.random() - 0.5); 
+    const handleNextQuestion = props.handleNextQuestion; 
 
     return (
         <>
@@ -17,7 +18,11 @@ function Answer (props) {
                 return (
                 (
                 <button className={`${color}`} onClick={() => handleAnswer(answer)}>{answer}</button>
-            ))})}
+                ))}
+            )}
+            { showAnswer && (
+                <button onClick={handleNextQuestion}>Next Question</button>
+            )}
         </>
     )
 }
