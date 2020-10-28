@@ -9,9 +9,13 @@ function QuestionPicker() {
         let index = Math.floor(Math.random() * length); 
         return arr[index];
     }
+    const handleAnswer = (answer) => {
+        //blah 
+    }
+
     return(
         <>
-        <p><Question questionObj={getRandomQuestion(questions)}/></p>
+        <p><Question handleAnswer={handleAnswer} questionObj={getRandomQuestion(questions)}/></p>
         </>
     )
 }

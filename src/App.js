@@ -4,6 +4,11 @@ import Routes from './config/routes';
 import './App.css'; 
 
 class App extends Component {
+  state = {
+    answers: [], 
+    questions: [], 
+  }
+  
   render () {
     return (
         <div>
