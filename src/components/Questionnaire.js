@@ -1,5 +1,6 @@
 import React, { Component } from 'react'; 
 import Question from './Question'; 
+import Score from './Score'; 
 
 const questions = require('../Tandem_Questions.json'); 
 
@@ -9,7 +10,6 @@ class Questionnaire extends Component {
         currentIndex: 0, 
         score: 0, 
     }; 
-
     handleAnswer = answer => {
         this.setState(answer => {
             return {currentIndex: answer.currentIndex + 1}
@@ -20,21 +20,26 @@ class Questionnaire extends Component {
             })
         }
     }; 
-
     render() {
 
         const currentIndex = this.state.currentIndex; 
         const questions = this.state.questions; 
         const currentQuestion = questions[currentIndex]
+        const score = this.state.score; 
 
         return(
             <>
+                <section>
+                    <Score score={score} />
+                </section>
+                <section>
+
                 <p><Question questionObj={currentQuestion} handleAnswer={this.handleAnswer}/></p>
+                </section>
                 {console.log(this.state.score)}
             </>
         )
     }
-
 }; 
 
 /* 
