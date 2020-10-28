@@ -7,8 +7,8 @@ const questions = require('../Tandem_Questions.json');
 const newQuestions = questions.map((question) => ({
     ...question, 
     "answers": [
-        "correct", 
-        ..."incorrect"
+        question.correct, 
+        ...question.incorrect
     ].sort(() => Math.random() )
 }))
 
@@ -58,6 +58,7 @@ class Questionnaire extends Component {
         const gameEnded = this.state.gameEnded; 
         const showAnswer = this.state.showAnswer; 
         const handleNextQuestion = this.handleNextQuestion; 
+
 
         return gameEnded ? (
         <p>Your score was...{score}</p>

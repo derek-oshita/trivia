@@ -7,6 +7,8 @@ function Question (props) {
     const question = props.questionObj.question; 
     const showAnswer = props.showAnswer; 
     const handleNextQuestion = props.handleNextQuestion; 
+    const answers = props.questionObj.answers; 
+
     return (
         <>
         <section className="question-section">
@@ -14,7 +16,7 @@ function Question (props) {
                 <p>"{question.toUpperCase()}"</p>
             </div>
         </section>
-            <Answer handleAnswer={handleAnswer} incorrect={props.questionObj.incorrect} correct={props.questionObj.correct} showAnswer={showAnswer} handleNextQuestion={handleNextQuestion}/> 
+            <Answer handleAnswer={handleAnswer} answers={answers} incorrect={props.questionObj.incorrect} correct={props.questionObj.correct} showAnswer={showAnswer} handleNextQuestion={handleNextQuestion}/> 
         </>
     )
 }

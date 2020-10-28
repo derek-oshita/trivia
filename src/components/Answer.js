@@ -3,16 +3,15 @@ import './Component.css';
 
 function Answer (props) {
     
-    const incorrectAnswers = props.incorrect; 
+    const answers = props.answers; 
     const correctAnswer = props.correct; 
     const handleAnswer = props.handleAnswer; 
     const showAnswer = props.showAnswer; 
-    const shuffleAnswers = [correctAnswer, ...incorrectAnswers].sort(() => Math.random() - 0.5); 
     const handleNextQuestion = props.handleNextQuestion; 
 
     return (
         <>
-            {shuffleAnswers.map(answer => {
+            {answers.map(answer => {
                 const color = showAnswer ? 
                 answer === correctAnswer ? 'btn-green' : 'btn-red' : 'btn-white'
                 return (
