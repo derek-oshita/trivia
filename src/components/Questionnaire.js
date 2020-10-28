@@ -4,9 +4,17 @@ import Score from './Score';
 
 const questions = require('../Tandem_Questions.json'); 
 
+const newQuestions = questions.map((question) => ({
+    ...question, 
+    "answers": [
+        "correct", 
+        ..."incorrect"
+    ].sort(() => Math.random() )
+}))
+
 class Questionnaire extends Component {
     state = {
-        questions: questions, 
+        questions: newQuestions, 
         currentIndex: 0, 
         score: 0, 
         gameEnded: false, 
@@ -62,6 +70,8 @@ class Questionnaire extends Component {
     }
 }; 
 
+export default Questionnaire; 
+
 /* 
 Notes: tutorial I followed was using a function based component that used hooks to fetch data from a foreign endpoint. I tried to refactor 
 to his function based component and struggled as I had trouble (specifically w/ syntax) on how to get the data from a local JSON file. 
@@ -69,8 +79,3 @@ I settled for a class based component, however, the handleAnswer method was not 
 The currentIndex would increment, but state was not updating. Eventually, I spent some time in the React documentation to understand "state" a little better and found that
 I can use the event object in my handleAnswer function to increment. 
 */
-
-
-
-
-export default Questionnaire; 
