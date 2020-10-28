@@ -1,5 +1,5 @@
 import React, { Component } from 'react'; 
-import QuestionPicker from '../../components/QuestionPicker'; 
+import Questionnaire from '../../components/Questionnaire'; 
 
 import './Tandem.css';  
 
@@ -11,7 +11,7 @@ class Tandem extends Component {
                 <h1>TANDEM TRIVIA!</h1>
             </header>
             <div className="question-div">
-                <QuestionPicker />
+                <Questionnaire />
             </div>
             </>
         )
