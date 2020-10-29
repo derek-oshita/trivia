@@ -2,6 +2,11 @@
     margin: 0; 
 }
 
+.main-container {
+    height: 100vh; 
+    margin-top: 25vh; 
+}
+
 header {
     text-align: center; 
 }
@@ -19,4 +24,14 @@ p {
 
 section {
     text-align: center; 
+    margin-top: 5vh; 
 }
+
+.play-button {
+    height: 8vh; 
+    width: 8vw; 
+    font-size: 20px; 
+    border-radius: 5px; 
+}
+
+

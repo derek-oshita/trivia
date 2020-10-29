@@ -4,7 +4,7 @@ import './Home.css';
 
 function Home () {
     return (
-        <>
+        <main className="main-container">
             {/* HEADER */}
                 <header>
                     <h1 className="animate__animated animate__pulse">TRIVIA TRAINER!</h1>
@@ -16,7 +16,7 @@ function Home () {
                         <button className="animate__animated animate__fadeIn animate__delay-2s play-button">Let's play!</button>
                     </Link>
                 </section>
-        </>
+        </main>
     )
 }; 
 
