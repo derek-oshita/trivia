@@ -1,9 +1,9 @@
 import React, { Component } from 'react'; 
 import Question from './Question'; 
 import Score from './Score'; 
+import FinalScore from './FinalScore'; 
 
 const questions = require('../Tandem_Questions.json'); 
-
 const newQuestions = questions.map((question) => ({
     ...question, 
     "answers": [
@@ -19,10 +19,13 @@ class Questionnaire extends Component {
         score: 0, 
         gameEnded: false, 
         showAnswer: false, 
+        highScore: false, 
     }; 
 
     handleAnswer = answer => {
+        console.log(this.state.highScore)
         const newIndex = this.state.currentIndex + 1; 
+        const score = this.state.score; 
         if (!this.state.showAnswer) {
             this.setState({
                 showAnswer: true, 
@@ -32,6 +35,12 @@ class Questionnaire extends Component {
                 this.setState(answer => {
                     return {score: answer.score + 1}
             })
+            // highScore 
+            if (score > 5) {
+                this.setState({
+                    highScore: true, 
+                })
+            }
             // end game
             if (newIndex >= 10) {
                 this.state.gameEnded = true; 
@@ -58,12 +67,14 @@ class Questionnaire extends Component {
         const gameEnded = this.state.gameEnded; 
         const showAnswer = this.state.showAnswer; 
         const handleNextQuestion = this.handleNextQuestion; 
+        const highScore = this.state.highScore; 
 
 
         return gameEnded ? (
-        <p>Your score was...{score}</p>
+            <FinalScore score={score} highScore={highScore}/>
         ) : (
             <>
+            {/* <FinalScore score={score} highScore={highScore} /> */}
             <Score score={score} />
             <Question questionObj={currentQuestion} handleAnswer={this.handleAnswer} showAnswer={showAnswer} handleNextQuestion={handleNextQuestion}/>
             </>
