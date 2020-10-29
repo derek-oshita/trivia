@@ -11,17 +11,23 @@ function Answer (props) {
 
     return (
         <>
+        <div className="answer-parent">
+        <section className="answer-container">
             {answers.map(answer => {
                 const color = showAnswer ? 
-                answer === correctAnswer ? 'btn-green' : 'btn-red' : 'btn-white'
+                answer === correctAnswer ? 'btn-green' : 'btn-red' : 'btn'
                 return (
                 (
-                <button className={`${color}`} onClick={() => handleAnswer(answer)}>{answer}</button>
+                <button className={`${color} answer-btn`} onClick={() => handleAnswer(answer)}>{answer}</button>
                 ))}
             )}
-            { showAnswer && (
-                <button onClick={handleNextQuestion}>Next Question</button>
-            )}
+        </section>
+        </div>
+        { showAnswer && (
+            <section>
+                <button className="next-btn btn" onClick={handleNextQuestion}>Next Question</button>
+            </section>
+        )}
         </>
     )
 }
@@ -34,4 +40,6 @@ order of the buttons without distinguishing between the correct answer and the w
 that would randomize the order of the buttons so long as both types of answers were combined into a single array. 
 
 Answers kept shuffling around every time we set state, so the answer you selected would end up moving around. 
+
+New to grid so styling the buttons got a little tough, especially, when it came to making them responsive for mobile devices. 
 */

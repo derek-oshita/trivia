@@ -13,7 +13,7 @@ function Home () {
             {/* GET STARTED BUTTON */}
                 <section>
                     <Link to='/categories'>
-                        <button className="animate__animated animate__fadeIn animate__delay-2s play-button">Let's play!</button>
+                        <button className="animate__animated animate__fadeIn animate__delay-2s play-button"><span>Let's play!</span></button>
                     </Link>
                 </section>
         </main>

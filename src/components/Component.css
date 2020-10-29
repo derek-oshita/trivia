@@ -32,14 +32,35 @@ SCORE COMPONENT
 ANSWER COMPONENT
 */
 
-.btn-green {
-    background-color: green; 
+.answer-parent {
+    display: flex; 
+    justify-content: center;
+    align-items: center; 
 }
 
-.btn-white {
-    background-color: none;
+.answer-container {
+    display: grid; 
+    /* grid-template-columns: 1fr 1fr;  */
+    grid-template-columns: 150px 150px; 
+    grid-auto-rows: 70px; 
+    column-gap: 20px; 
+    row-gap: 20px; 
+}
+
+.btn {
+    border-radius: 3px; 
+    background-color: white;
+}
+
+.next-btn {
+    height: 70px; 
+    width: 150px; 
+}
+
+.btn-green {
+    border: 5px solid greenyellow; 
 }
 
 .btn-red {
-    background-color: red; 
+    border: 5px solid red; 
 }
