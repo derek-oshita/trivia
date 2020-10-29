@@ -7,13 +7,13 @@ function Home () {
         <>
             {/* HEADER */}
                 <header>
-                    <h1>TRIVIA TRAINER!</h1>
-                    <p>A place to train the mind</p>
+                    <h1 className="animate__animated animate__pulse">TRIVIA TRAINER!</h1>
+                    <p className="animate__animated animate__fadeIn animate__delay-1s subheader">A place to train the mind</p>
                 </header>
             {/* GET STARTED BUTTON */}
                 <section>
                     <Link to='/categories'>
-                    <button>Let's play!</button>
+                        <button className="animate__animated animate__fadeIn animate__delay-2s play-button">Let's play!</button>
                     </Link>
                 </section>
         </>

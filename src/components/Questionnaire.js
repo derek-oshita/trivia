@@ -9,7 +9,7 @@ const newQuestions = questions.map((question) => ({
     "answers": [
         question.correct, 
         ...question.incorrect
-    ].sort(() => Math.random() )
+    ].sort(() => Math.random() - 0.5 )
 }))
 
 class Questionnaire extends Component {
