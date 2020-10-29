@@ -6,14 +6,14 @@ import './Tandem.css';
 class Tandem extends Component {
     render() {
         return(
-            <>
-            <header>
-                <h1>TANDEM TRIVIA!</h1>
-            </header>
-            <div className="question-div">
-                <Questionnaire />
-            </div>
-            </>
+            <main>
+                <header>
+                    <h1>TANDEM TRIVIA!</h1>
+                </header>
+                <div className="question-div">
+                    <Questionnaire />
+                </div>
+            </main>
         )
     }
 }
