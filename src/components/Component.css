@@ -1,32 +1,3 @@
-/***************************************************************************************************************************************
-QUESTION COMPONENT
-*/
-
-.question-section {
-    width: 100vw; 
-    display: flex; 
-    justify-content: center;
-    align-items: center;
-}
-
-.question-box {
-    height: 35vh; 
-    width: 35vw; 
-    background-color: blue;
-    display: flex; 
-    justify-content: center;
-    align-items: center;
-    border: 8px solid white;
-    border-radius: 5px;  
-}
-
-/***************************************************************************************************************************************
-SCORE COMPONENT
-*/
-
-.score-div {
-    text-align: center; 
-}
 
 /***************************************************************************************************************************************
 ANSWER COMPONENT
@@ -63,4 +34,60 @@ ANSWER COMPONENT
 
 .btn-red {
     border: 5px solid red; 
+}
+
+/***************************************************************************************************************************************
+FINAL SCORE COMPONENT
+*/
+
+.final-score-section {
+    margin: 0; 
+}
+
+.final-score-container {
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    height: 10vh; 
+}
+
+.trebek {
+    width: 45vw; 
+    height: 45vh; 
+    border-radius: 5px; 
+    border: 5px solid white;
+}
+
+.message-bubble {
+    background-color: blue;
+}
+
+/***************************************************************************************************************************************
+QUESTION COMPONENT
+*/
+
+.question-section {
+    width: 100vw; 
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+}
+
+.question-box {
+    height: 35vh; 
+    width: 35vw; 
+    background-color: blue;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    border: 8px solid white;
+    border-radius: 5px;  
+}
+
+/***************************************************************************************************************************************
+SCORE COMPONENT
+*/
+
+.score-div {
+    text-align: center; 
 }

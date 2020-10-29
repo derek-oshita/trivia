@@ -57,7 +57,6 @@ class Questionnaire extends Component {
         })
     };
     
-
     render() {
 
         const currentIndex = this.state.currentIndex; 
@@ -69,14 +68,13 @@ class Questionnaire extends Component {
         const handleNextQuestion = this.handleNextQuestion; 
         const highScore = this.state.highScore; 
 
-
         return gameEnded ? (
             <FinalScore score={score} highScore={highScore}/>
         ) : (
             <>
-            {/* <FinalScore score={score} highScore={highScore} /> */}
-            <Score score={score} />
-            <Question questionObj={currentQuestion} handleAnswer={this.handleAnswer} showAnswer={showAnswer} handleNextQuestion={handleNextQuestion}/>
+            <FinalScore score={score} highScore={highScore} />
+            {/* <Score score={score} />
+            <Question questionObj={currentQuestion} handleAnswer={this.handleAnswer} showAnswer={showAnswer} handleNextQuestion={handleNextQuestion}/> */}
             </>
         )
     }
