@@ -72,9 +72,9 @@ class Questionnaire extends Component {
             <FinalScore score={score} highScore={highScore}/>
         ) : (
             <>
-            <FinalScore score={score} highScore={highScore} />
-            {/* <Score score={score} />
-            <Question questionObj={currentQuestion} handleAnswer={this.handleAnswer} showAnswer={showAnswer} handleNextQuestion={handleNextQuestion}/> */}
+            {/* <FinalScore score={score} highScore={highScore} /> */}
+            <Score score={score} />
+            <Question questionObj={currentQuestion} handleAnswer={this.handleAnswer} showAnswer={showAnswer} handleNextQuestion={handleNextQuestion}/>
             </>
         )
     }

@@ -66,6 +66,10 @@ FINAL SCORE COMPONENT
 QUESTION COMPONENT
 */
 
+.question-div {
+    height: 100vh; 
+}
+
 .question-section {
     width: 100vw; 
     display: flex; 
