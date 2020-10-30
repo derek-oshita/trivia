@@ -31,6 +31,13 @@ section {
     margin-top: 4vh; 
 }
 
+button {
+    transition-duration: 0.4s; 
+    text-decoration: none; 
+    overflow: hidden; 
+    cursor: pointer; 
+}
+
 /***************************************************************************************************************************************
 PLAY BUTTON
 */

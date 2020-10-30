@@ -29,11 +29,15 @@ ANSWER COMPONENT
 }
 
 .btn-green {
-    border: 5px solid greenyellow; 
+    border: 5px solid #32de84; 
 }
 
 .btn-red {
-    border: 5px solid red; 
+    border: 5px solid #fd5c63; 
+}
+
+.play-again {
+    padding-top: 2vh; 
 }
 
 /***************************************************************************************************************************************
@@ -100,17 +104,28 @@ SCORE COMPONENT
     h1 {
         line-height: 1;
     }
+    button {
+        font-size: 16px; 
+    }
+    .score-div{
+        padding-top: 2vh; 
+    }
     .tandem-title {
+        padding-top: 2vh; 
         font-size: 75px; 
     }
     .tandem-header {
         padding: 0; 
     }
     .question-box {
-        width: 100vw; 
+        width: 98vw; 
         height: 25vh; 
     }
     .trebek {
         width: 99vw; 
+    }
+    .play-again {
+        padding-top: 2vh; 
+        font-size: 65px; 
     }
 }

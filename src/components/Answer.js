@@ -25,7 +25,7 @@ function Answer (props) {
         </div>
         { showAnswer && (
             <section>
-                <button className="next-btn btn" onClick={handleNextQuestion}>Next Question</button>
+                <button className="next-btn btn animate__fadeIn animate__animated" onClick={handleNextQuestion}>Next Question</button>
             </section>
         )}
         </>
