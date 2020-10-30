@@ -5,7 +5,7 @@ function Score (props) {
     const total = 10; 
     return (
     <div className="score-div">
-       <p>{props.score} / {total}</p> 
+       <p className="subheader">{props.score} / {total}</p> 
     </div>
     )
 }

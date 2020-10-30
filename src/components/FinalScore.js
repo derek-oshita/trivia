@@ -11,7 +11,7 @@ function FinalScore (props) {
     // HAPPY ALEX TREBEK
         <section className="final-score-section">
             <div className="final-score-container">
-                <p className="final-score animate__animated animate__fadeIn animate__delay-1s">YOUR FINAL SCORE: {score * 10}%</p>
+                <p className="final-score animate__animated animate__fadeIn animate__delay-1s subheader">YOUR FINAL SCORE: {score * 10}%</p>
             </div>
             <img className="animate__animated animate__fadeInUp animate__delay-2s trebek"src={happy} />
             <h1 onClick={newGame} className="play-again animate__animated animate__fadeInUp animate__delay-3s">PLAY AGAIN?</h1>
@@ -20,7 +20,7 @@ function FinalScore (props) {
     // SAD ALEX TREBEK
         <section className="final-score-section">
             <div className="final-score-container">
-                <p className="final-score animate__animated animate__fadeIn animate__delay-1s">YOUR FINAL SCORE: {score * 10}%</p>
+                <p className="final-score animate__animated animate__fadeIn animate__delay-1s subheader">YOUR FINAL SCORE: {score * 10}%</p>
             </div>
             <img className="animate__animated animate__fadeInUp animate__delay-2s trebek"src={sad} />
             <h1 onClick={newGame} className="play-again animate__animated animate__fadeInUp animate__delay-3s">PLAY AGAIN?</h1>

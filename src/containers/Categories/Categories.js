@@ -13,7 +13,7 @@ class Categories extends Component {
                 </header>
             {/* TANDEM TRIVIA */}
                 <section>
-                    <div>
+                    <div className="category-container"> 
                         <Link to="/tandem">
                                 <button className="play-button category-btn"><span>TANDEM TRIVIA</span></button>
                         </Link>

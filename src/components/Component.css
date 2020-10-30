@@ -10,6 +10,7 @@ ANSWER COMPONENT
 }
 
 .answer-container {
+    padding-top: 4vh; 
     display: grid; 
     /* grid-template-columns: 1fr 1fr;  */
     grid-template-columns: 150px 150px; 
@@ -24,6 +25,7 @@ ANSWER COMPONENT
 }
 
 .next-btn {
+    margin-top: 15px; 
     height: 70px; 
     width: 150px; 
 }
@@ -118,7 +120,7 @@ SCORE COMPONENT
         padding: 0; 
     }
     .question-box {
-        width: 98vw; 
+        width: 85vw; 
         height: 25vh; 
         border: 2px solid white; 
     }

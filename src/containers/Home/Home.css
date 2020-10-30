@@ -28,7 +28,11 @@ p {
 
 section {
     text-align: center; 
-    margin-top: 4vh; 
+    /* margin-top: 4vh;  */
+}
+
+.subheader {
+    font-family: 'Jockey One', sans-serif;
 }
 
 button:focus {
@@ -81,6 +85,9 @@ MEDIA QUERY
 @media (max-width: 414px) {
     a {
         text-decoration: none;
+    }
+    h1 {
+        font-size: 80px; 
     }
     .main-container{
         margin: 0; 

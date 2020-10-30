@@ -2,12 +2,18 @@
 MAIN
 */
 
+* {
+  overflow: hidden;
+}
+
 body {
   background-image: url('./images/jeopardy_background.jpg'); 
   background-repeat: no-repeat;
   background-size: cover; 
+  overflow: hidden; 
 }
 
 a {
   text-decoration: none;
 }
+
