@@ -108,7 +108,7 @@ SCORE COMPONENT
     }
     button {
         font-size: 16px; 
-        background-color: white;
+        background-color: white !important;
     }
     .score-div{
         padding-top: 2vh; 

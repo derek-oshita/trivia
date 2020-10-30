@@ -95,6 +95,9 @@ MEDIA QUERY
     header {
         padding-top: 27vh; 
     }
+    button {
+        background-color: white !important;
+    }
     .sub-header {
         padding: 2vh 0 2vh 0; 
     }
