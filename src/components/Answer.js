@@ -12,16 +12,16 @@ function Answer (props) {
     return (
         <>
         <div className="answer-parent">
-        <section className="answer-container">
-            {answers.map(answer => {
-                const color = showAnswer ? 
-                answer === correctAnswer ? 'btn-green' : 'btn-red' : 'btn'
-                return (
-                (
-                <button className={`${color} answer-btn`} onClick={() => handleAnswer(answer)}>{answer}</button>
-                ))}
-            )}
-        </section>
+            <section className="answer-container">
+                {answers.map(answer => {
+                    const color = showAnswer ? 
+                    answer === correctAnswer ? 'btn-green' : 'btn-red' : 'btn'
+                    return (
+                    (
+                    <button className={`${color} answer-btn `} onClick={() => handleAnswer(answer)}>{answer}</button>
+                    ))}
+                )}
+            </section>
         </div>
         { showAnswer && (
             <section>

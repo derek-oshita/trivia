@@ -31,11 +31,9 @@ section {
     margin-top: 4vh; 
 }
 
-button {
-    transition-duration: 0.4s; 
-    text-decoration: none; 
-    overflow: hidden; 
-    cursor: pointer; 
+button:focus {
+    outline: none; 
+    box-shadow: none; 
 }
 
 /***************************************************************************************************************************************
