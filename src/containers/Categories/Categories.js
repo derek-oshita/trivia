@@ -11,18 +11,15 @@ class Categories extends Component {
         return (
            <main className="main-container">
                 <header>
-                    <h2>PICK A CATEGORY!</h2>
+                    <h1>PICK A CATEGORY!</h1>
                 </header>
                 <section>
                     {/* TANDEM */}
                     <div>
                         <Link to="/tandem">
-                                <p className="category">TANDEM TRIVIA</p>
-                            </Link>
-                    </div>
-                    {/* COMPUTER SCIENCE */}
-                    <div>
-                            <p className="category">COMPUTER SCIENCE</p>
+                                {/* <p className="category">TANDEM TRIVIA</p> */}
+                                <button className="play-button"><span>TANDEM TRIVIA</span></button>
+                        </Link>
                     </div>
                 </section>
            </main>

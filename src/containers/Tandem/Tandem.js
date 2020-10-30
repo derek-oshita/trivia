@@ -7,8 +7,8 @@ class Tandem extends Component {
     render() {
         return(
             <main>
-                <header>
-                    <h1>TANDEM TRIVIA!</h1>
+                <header className="tandem-header"> 
+                    <h1 className="tandem-title">TANDEM TRIVIA!</h1>
                 </header>
                 <div className="question-div">
                     <Questionnaire />

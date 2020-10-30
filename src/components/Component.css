@@ -95,3 +95,22 @@ SCORE COMPONENT
 .score-div {
     text-align: center; 
 }
+
+@media (max-width: 414px) {
+    h1 {
+        line-height: 1;
+    }
+    .tandem-title {
+        font-size: 75px; 
+    }
+    .tandem-header {
+        padding: 0; 
+    }
+    .question-box {
+        width: 100vw; 
+        height: 25vh; 
+    }
+    .trebek {
+        width: 99vw; 
+    }
+}

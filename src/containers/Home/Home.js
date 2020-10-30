@@ -11,7 +11,7 @@ function Home () {
                     <p className="animate__animated animate__fadeIn animate__delay-1s subheader">A place to train the mind</p>
                 </header>
             {/* GET STARTED BUTTON */}
-                <section>
+                <section className="play-button-section">
                     <Link to='/categories'>
                         <button className="animate__animated animate__fadeIn animate__delay-2s play-button"><span>Let's play!</span></button>
                     </Link>
