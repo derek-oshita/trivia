@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom';
 import { BrowserRouter as Router } from 'react-router-dom'; 
 import App from './App';
 
-
 ReactDOM.render(
   <React.StrictMode>
     <Router>
@@ -12,11 +11,4 @@ ReactDOM.render(
   </React.StrictMode>,
   document.getElementById('root')
 );
-
-
-// EXERCISE
-// ReactDOM.render(
-//   <Post title={post.title} author={post.author} body={post.body} comments={post.comments}/>, 
-//   document.getElementById('root')
-// );
 

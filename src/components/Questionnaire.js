@@ -3,8 +3,8 @@ import Question from './Question';
 import Score from './Score'; 
 import FinalScore from './FinalScore'; 
 
+// DATA VARIABLES 
 const questions = require('../Tandem_Questions.json'); 
-
 const roundOne = questions.map((question) => ({
     ...question, 
     "answers": [
@@ -12,10 +12,9 @@ const roundOne = questions.map((question) => ({
         ...question.incorrect
     ].sort(() => Math.random() - 0.5 )
 }))
-
 const roundTwo = roundOne.slice(10, 20); 
 
-
+// QUESTIONNAIRE 
 class Questionnaire extends Component {
     state = {
         questions: roundOne, 
@@ -26,42 +25,46 @@ class Questionnaire extends Component {
         highScore: false, 
         newGame: false, 
     }; 
-
+    // HANDLE ANSWER
     handleAnswer = answer => {
-        console.log(this.state.gameEnded)
         const newIndex = this.state.currentIndex + 1; 
         const score = this.state.score; 
+        // SHOW ANSWER 
         if (!this.state.showAnswer) {
             this.setState({
                 showAnswer: true, 
             })
-            // change score if answer is correct
+            // CORRECT ANSWER
             if (answer === this.state.questions[this.state.currentIndex].correct) {
                 this.setState(answer => {
                     return {score: answer.score + 1}
-            })
-            // highScore 
-            if (score > 5) {
-                this.setState({
-                    highScore: true, 
                 })
+                // HIGH SCORE 
+                if (score > 5) {
+                    this.setState({
+                        highScore: true, 
+                    })
+                }
             }
-        }}
-    };
-
+        }
+    }; 
+    // HANDLE NEXT QUESTION
     handleNextQuestion = () => {
         const newIndex = this.state.currentIndex + 1; 
+        // SHOW ANSWER 
         this.setState({
             showAnswer: false, 
         })
+        // CHANGE QUESTION
         this.setState(answer => {
             return {currentIndex: answer.currentIndex + 1}
         })
+        // END GAME 
         if (newIndex >= 10) {
             this.state.gameEnded = true; 
         }
     };
-    
+    // NEW GAME 
     newGame = () => {
         this.setState({
             questions: roundTwo, 
@@ -90,8 +93,10 @@ class Questionnaire extends Component {
             <FinalScore newGame={newGame} score={score} highScore={highScore}/>
         ) : (
             <>
-            <Score score={score} />
-            <Question questionObj={currentQuestion} handleAnswer={this.handleAnswer} showAnswer={showAnswer} handleNextQuestion={handleNextQuestion} newGame={newGame}/>
+            {/* SCORE */}
+                <Score score={score} />
+            {/* QUESTION */}
+                <Question questionObj={currentQuestion} handleAnswer={this.handleAnswer} showAnswer={showAnswer} handleNextQuestion={handleNextQuestion} newGame={newGame}/>
             </>
         )
     }

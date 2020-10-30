@@ -6,11 +6,13 @@ class Tandem extends Component {
     render() {
         return(
             <main>
-                    <header className="tandem-header"> 
+            {/* HEADER */}
+                <header className="tandem-header"> 
                     <Link to="/">
                         <h1 className="tandem-title">TANDEM TRIVIA!</h1>
                     </Link>
                 </header>
+            {/* QUESTIONNAIRE */}
                 <div className="question-div">
                     <Questionnaire />
                 </div>

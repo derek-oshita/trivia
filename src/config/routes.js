@@ -13,7 +13,7 @@ function Routes(props) {
                 <Route path='/categories' component={Categories} />
             {/* TANDEM TRIVIA ROUTE */}
                 <Route path='/tandem' component={Tandem} />
-            {/* COMPUTER SCIENCE ROUTE */}
+            {/* MORE CATEGORIES TO FOLLOW */}
         </Switch>
     )
 }

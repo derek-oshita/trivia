@@ -1,8 +1,11 @@
+/***************************************************************************************************************************************
+MAIN
+*/
+
 body {
   background-image: url('./images/jeopardy_background.jpg'); 
   background-repeat: no-repeat;
   background-size: cover; 
-  /* -webkit-background-size: cover;  */
 }
 
 a {

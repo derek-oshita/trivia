@@ -120,6 +120,7 @@ SCORE COMPONENT
     .question-box {
         width: 98vw; 
         height: 25vh; 
+        border: 2px solid white; 
     }
     .trebek {
         width: 99vw; 
