@@ -4,7 +4,8 @@ import Score from './Score';
 import FinalScore from './FinalScore'; 
 
 const questions = require('../Tandem_Questions.json'); 
-const newQuestions = questions.map((question) => ({
+
+const roundOne = questions.map((question) => ({
     ...question, 
     "answers": [
         question.correct, 
@@ -12,9 +13,12 @@ const newQuestions = questions.map((question) => ({
     ].sort(() => Math.random() - 0.5 )
 }))
 
+const roundTwo = roundOne.slice(10, 20); 
+
+
 class Questionnaire extends Component {
     state = {
-        questions: newQuestions, 
+        questions: roundOne, 
         currentIndex: 0, 
         score: 0, 
         gameEnded: false, 
@@ -60,7 +64,7 @@ class Questionnaire extends Component {
     
     newGame = () => {
         this.setState({
-            questions: newQuestions, 
+            questions: roundTwo, 
             currentIndex: 0, 
             score: 0, 
             gameEnded: false, 
@@ -86,7 +90,6 @@ class Questionnaire extends Component {
             <FinalScore newGame={newGame} score={score} highScore={highScore}/>
         ) : (
             <>
-            {/* <FinalScore score={score} highScore={highScore} /> */}
             <Score score={score} />
             <Question questionObj={currentQuestion} handleAnswer={this.handleAnswer} showAnswer={showAnswer} handleNextQuestion={handleNextQuestion} newGame={newGame}/>
             </>
