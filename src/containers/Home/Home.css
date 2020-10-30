@@ -44,6 +44,7 @@ PLAY BUTTON
 */
 
 .play-button {
+    margin-top: 2vh; 
     text-transform: uppercase; 
     height: 8vh; 
     width: 15vw; 
