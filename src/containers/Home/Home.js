@@ -1,5 +1,4 @@
 import React from 'react'; 
-import { Link } from 'react-router-dom'; 
 import './Home.css'; 
 
 function Home () {
@@ -12,9 +11,9 @@ function Home () {
                 </header>
             {/* GET STARTED BUTTON */}
                 <section className="play-button-section">
-                    <Link to='/categories'>
+                    <a href='/categories'>
                         <button className="animate__animated animate__fadeIn animate__delay-2s play-button"><span>Let's play!</span></button>
-                    </Link>
+                    </a>
                 </section>
         </main>
     )
