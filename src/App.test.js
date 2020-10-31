@@ -5,6 +5,6 @@ import Home from './containers/Home/Home'
 
 test('renders home container', () => {
   render(<Home />);
-  const text = screen.getByText(/TRIVIA TRAINER!/i);
-  expect(text).toBeInTheDocument();
+  const welcome = screen.getByText(/TRIVIA TRAINER!/i);
+  expect(welcome).toBeInTheDocument();
 });

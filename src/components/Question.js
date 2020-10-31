@@ -13,7 +13,7 @@ function Question (props) {
         {/* QUESTION */}
             <section className="question-section">
                 <div className="question-box">
-                    <p className="animate__animated animate__fadeInUp">"{question.toUpperCase()}"</p>
+                    <p className="question animate__animated animate__fadeInUp">"{question.toUpperCase()}"</p>
                 </div>
             </section>
         {/* ANSWER */}
