@@ -11,13 +11,15 @@ I decided to model the game after Jeopardy! as it is my favorite game show and o
 Dependencies: 
 - React
 - react-router-dom
-- Enzyme Testing 
+- Enzyme / Jest (testing) 
 
 Styling: 
 - Animate.style CDN 
 - Google Fonts CDN 
 
 When reviewing the Tandem project prompt, I immediately thought of a one-page application and decided to go with React. I have grown to love React due to it's component-based encapsulation and performance, but because I'm still new to it, React continues to yield challenges that I wanted to face!
+
+Because Tandem is big on testing, I decided to write a small unit test script with Enzyme to better understand how testing works and its impact on developing in general. As I expand on the application, I will continue to write more test documentation. 
 
 ## How to run
 
@@ -30,54 +32,25 @@ Run 'npm i' from the command line to install all the dependencies.
 ### `npm start`
 
 Run 'npm start' in order to run the application. 
-The application will load a window to 'localhost:3000
+The application will load a window to 'localhost:3000'. 
 
-### `npm run build`
+## Assumptions 
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- A round of trivia has 10 Questions
+- All questions are multiple-choice questions
+- Your score does not need to update in real time
+- Results can update on form submit, button click, or any interaction you choose
+- We will provide you with the trivia data such as the questions, correct and incorrect answers via a JSON file.-
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Acceptance Criteria 
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- A user can view questions.
+- Questions with their multiple choice options must be displayed one at a time. Questions should not repeat in a round.
+- A user can select only 1 answer out of the 4 possible answers.
+- The correct answer must be revealed after a user has submitted their answer A user can see the score they received at the end of the round
 
-### `npm run eject`
+## Thanks 
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- A special thanks to Florin Pop on Youtube for his exceptional tutorial!
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
