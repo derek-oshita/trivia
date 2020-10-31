@@ -111,7 +111,7 @@ SCORE COMPONENT
         background-color: white !important;
     }
     .score-div{
-        padding-top: 2vh; 
+        padding: 1vh 0; 
     }
     .tandem-title {
         padding-top: 2vh; 
@@ -123,10 +123,10 @@ SCORE COMPONENT
     .question-box {
         width: 85vw; 
         height: 25vh; 
-        border: 2px solid white; 
+        border: 1px solid white; 
     }
     .trebek {
-        width: 99vw; 
+        width: 98vw; 
     }
     .play-again {
         padding-top: 2vh; 
