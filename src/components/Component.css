@@ -12,7 +12,6 @@ ANSWER COMPONENT
 .answer-container {
     padding-top: 4vh; 
     display: grid; 
-    /* grid-template-columns: 1fr 1fr;  */
     grid-template-columns: 150px 150px; 
     grid-auto-rows: 70px; 
     column-gap: 20px; 
@@ -101,6 +100,10 @@ SCORE COMPONENT
 .score-div {
     text-align: center; 
 }
+
+/***************************************************************************************************************************************
+MEDIA QUERY
+*/
 
 @media (max-width: 414px) {
     h1 {
