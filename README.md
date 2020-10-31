@@ -1,19 +1,36 @@
-## Trivia 
+## Trivia Trainer!
 
-In the project directory, you can run:
+Link to application: https://tandem-trivia-trainer.herokuapp.com/
+
+Trivia Trainer is my first attempt at a trivia game. It started off as a take-home project for the Tandem SE Apprenticeship and quickly became one of my favorite projects to work on. The application is designed to help users practice their trivia by answering multiple-choice questions (provided by Tandem) and tracking their score. 
+
+I decided to model the game after Jeopardy! as it is my favorite game show and obviously, the best game show ever. 
+
+## Technologies Used
+
+Dependencies: 
+- React
+- react-router-dom
+- Enzyme Testing 
+
+Styling: 
+- Animate.style CDN 
+- Google Fonts CDN 
+
+When reviewing the Tandem project prompt, I immediately thought of a one-page application and decided to go with React. I have grown to love React due to it's component-based encapsulation and performance, but because I'm still new to it, React continues to yield challenges that I wanted to face!
+
+## How to run
+
+Be sure to clone this repo down $cd into the directory. 
+
+### `npm i`
+
+Run 'npm i' from the command line to install all the dependencies. 
 
 ### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Run 'npm start' in order to run the application. 
+The application will load a window to 'localhost:3000
 
 ### `npm run build`
 
