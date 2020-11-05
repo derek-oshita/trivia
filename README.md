@@ -49,6 +49,11 @@ The application will load a window to 'localhost:3000'.
 - A user can select only 1 answer out of the 4 possible answers.
 - The correct answer must be revealed after a user has submitted their answer A user can see the score they received at the end of the round
 
+## Future Development Features
+
+- More categories to choose from
+- Question randomizer
+
 ## Thanks 
 
 - A special thanks to Florin Pop on Youtube for his exceptional tutorial!
