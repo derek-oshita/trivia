@@ -4,7 +4,7 @@ Link to application: https://tandem-trivia-trainer.herokuapp.com/
 
 Trivia Trainer is my first attempt at a trivia game. It started off as a take-home project for the Tandem SE Apprenticeship and quickly became one of my favorite projects to work on. The application is designed to help users practice their trivia by answering multiple-choice questions (provided by Tandem) and tracking their score. 
 
-I decided to model the game after Jeopardy! as it is my favorite game show and obviously, the best game show ever. 
+I decided to model the game after Jeopardy! as it is my favorite game show and obviously, the best game show ever. RIP Alex Trebek :(
 
 ## Technologies Used
 
